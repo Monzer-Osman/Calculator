@@ -28,7 +28,7 @@ public class Calculator {
         int n = eq.size();
 
         for(int i = 2; i < n; i+=2) {
-            if (eq.get(i).charAt(0) < 48 || eq.get(0).charAt(0) > 56) {
+            if ((int)eq.get(i).charAt(0) < 48 || (int)eq.get(i).charAt(0) > 56) {
                 return 0.0000E11010;
             }
         }
@@ -47,6 +47,9 @@ public class Calculator {
 
         for (int i = 1; i < n; i += 2)
         {
+            if(i+1 == n){
+                break;
+            }
             if (eq.get(i).charAt(0) == '+')
             {
                 result += Double.parseDouble(eq.get(i+1));

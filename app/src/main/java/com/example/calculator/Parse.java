@@ -26,7 +26,9 @@ public class Parse {
             }
         }
 
-        components.add(tmp);
+        if(!tmp.isEmpty())
+            components.add(tmp);
+
         return components;
     }
 

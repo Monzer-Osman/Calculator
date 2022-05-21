@@ -1,0 +1,1 @@
+"[1-handle negative numbers operations] [2-handle fractions ('ex. 0.5000 should be 0.5')] [3-improve the design and add code comments and explainations" 
