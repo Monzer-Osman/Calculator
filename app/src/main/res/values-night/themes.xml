@@ -1,0 +1,44 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Calculator" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme2.My_Application" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/pattern_1</item>
+        <item name="colorPrimaryVariant">@color/pattern_6</item>
+        <item name="colorOnPrimary">@color/pattern_2</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/pattern_5</item>
+        <item name="colorSecondaryVariant">@color/pattern_3</item>
+        <item name="colorOnSecondary">@color/pattern_4</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme3.My_Application" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/pattern_3</item>
+        <item name="colorPrimaryVariant">@color/pattern_3</item>
+        <item name="colorOnPrimary">@color/first</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/fourth</item>
+        <item name="colorSecondaryVariant">@color/fourth</item>
+        <item name="colorOnSecondary">@color/fourth</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>
