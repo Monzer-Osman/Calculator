@@ -1,25 +1,18 @@
 package com.example.calculator;
-
-import static com.example.calculator.Parse.tokenize;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
-import java.lang.Math;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView result, text;
-    Button button[];
-    Button c, del, multi, div, minus, plus, modulus, dot, equal;
+    TextView text;
+    Button c, del, multi, div, minus, plus, modulus, dot, equal, button[];
+
     private String number1 = "Null", number2 = "Null";
     private char sign = 'N';
 
@@ -28,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        result = findViewById(R.id.textView);
         text = findViewById(R.id.screenShow);
+
         button = new Button[11];
         button[0] = findViewById(R.id.button0);
         button[1] = findViewById(R.id.button1);
@@ -52,37 +45,6 @@ public class MainActivity extends AppCompatActivity {
         dot = findViewById(R.id.button_dot);
         multi = findViewById(R.id.button_multiply);
         equal = findViewById(R.id.button_equal);
-
-    }
-
-    @Override
-    protected void onStart() {
-        Toast.makeText(getApplicationContext(),"Hello ", Toast.LENGTH_SHORT);
-        super.onStart();
-    }
-
-    @Override
-    protected void onStop() {
-        Toast.makeText(getApplicationContext(),"Waiting ..!", Toast.LENGTH_SHORT);
-        super.onStop();
-    }
-
-    @Override
-    protected void onDestroy() {
-        Toast.makeText(getApplicationContext(),"Bye Gonna Miss You", Toast.LENGTH_LONG);
-        super.onDestroy();
-    }
-
-    @Override
-    protected void onPause() {
-        Toast.makeText(getApplicationContext(),"Waiting For You", Toast.LENGTH_SHORT);
-        super.onPause();
-    }
-
-    @Override
-    protected void onResume() {
-        Toast.makeText(getApplicationContext(),"Welcome Back", Toast.LENGTH_SHORT);
-        super.onResume();
     }
 
     public void onClick0(View view){
@@ -163,18 +125,20 @@ public class MainActivity extends AppCompatActivity {
         else{
 
             ArrayList<String> r = Parse.tokenize(text.getText().toString());
-            double result = Calculator.calculate(r);
 
-            if(result == 0.0000E11010){
+            if(!Validator.isValid(r)){
                 text.setText("Error");
             }
             else {
+                double result = Calculator.calculate(r);
                 int result2 = (int) result;
                 if (result - (double) result2 == 0.0) {
                     System.out.println("result : " + result);
                     text.setText(result2 + "");
                 } else {
-                    String s = String.format("%.6f", result);
+                    String s = String.valueOf(result);
+                    if(s.length() >= 6)
+                        s = String.format("%.6f", result);
                     text.setText(s);
                 }
             }
@@ -183,6 +147,5 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickC(View view){
         text.setText("");
-        result.setText("");
     }
 }

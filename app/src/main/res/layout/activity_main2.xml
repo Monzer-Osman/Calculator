@@ -13,7 +13,7 @@
         android:layout_height="183dp"
         android:background="#F4F0F0"
         android:gravity="center"
-        android:text="Warnning !!!"
+        android:text="Live Your Live With Passion"
         android:textAlignment="center"
         android:textColor="#D30C0C"
         android:textSize="34sp"

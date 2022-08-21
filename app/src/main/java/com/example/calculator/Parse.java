@@ -1,4 +1,6 @@
 package com.example.calculator;
+import android.util.Log;
+
 import java.util.ArrayList;
 
 public class Parse {
@@ -29,6 +31,7 @@ public class Parse {
         if(!tmp.isEmpty())
             components.add(tmp);
 
+        Log.d("parser : ", components.toString());
         return components;
     }
 

@@ -4,11 +4,11 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@mipmap/calculator_logo1"
+        android:label="Calculator"
+        android:roundIcon="@mipmap/calculator_logo1"
         android:supportsRtl="true"
-        android:theme="@style/Theme3.My_Application">
+        android:theme="@style/Theme.AppCompat">
         <activity
             android:name=".MainActivity2"
             android:exported="false" />
