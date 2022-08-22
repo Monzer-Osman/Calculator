@@ -29,7 +29,7 @@ public class Calculator {
 
         double result;
 
-        for (int i = 1; i < eq.size(); i += 1) {
+        for (int i = 1; i < eq.size(); i += 2) {
 
             if (i + 1 == eq.size()) {
                 break;
@@ -38,10 +38,11 @@ public class Calculator {
                 eq.set(i + 1, String.valueOf(result));
                 eq.remove(i - 1);
                 eq.remove(i - 1);
+                i = i-1;
             }
         }
 
-        for (int i = 1; i < eq.size(); i += 1) {
+        for (int i = 1; i < eq.size(); i += 2) {
 
             if (i + 1 == eq.size()) {
                 break;
@@ -51,10 +52,11 @@ public class Calculator {
                 eq.set(i + 1, String.valueOf(result));
                 eq.remove(i - 1);
                 eq.remove(i - 1);
+                i = i-1;
             }
         }
 
-        for (int i = 1; i < eq.size(); i += 1) {
+        for (int i = 1; i < eq.size(); i += 2) {
 
             if (i + 1 == eq.size()) {
                 break;
@@ -64,6 +66,7 @@ public class Calculator {
                 eq.set(i + 1, String.valueOf(result));
                 eq.remove(i - 1);
                 eq.remove(i - 1);
+                i = i-1;
             }
         }
         //Log.d("eq : ", eq.toString());
@@ -75,6 +78,9 @@ public class Calculator {
             else if (eq.get(i).charAt(0) == '-') {
                 result = Double.parseDouble(eq.get(i-1)) - Double.parseDouble(eq.get(i + 1));
                 eq.set(i + 1, String.valueOf(result));
+                eq.remove(i - 1);
+                eq.remove(i - 1);
+                i = i-1;
             }
         }
 
@@ -85,10 +91,13 @@ public class Calculator {
             else if (eq.get(i).charAt(0) == '+') {
                 result = Double.parseDouble(eq.get(i-1)) + Double.parseDouble(eq.get(i + 1));
                 eq.set(i + 1, String.valueOf(result));
+                eq.remove(i - 1);
+                eq.remove(i - 1);
+                i = i-1;
             }
         }
 
-        return Double.valueOf(eq.get(eq.size()-1));
+        return Double.parseDouble(eq.get(0));
     }
 }
 
