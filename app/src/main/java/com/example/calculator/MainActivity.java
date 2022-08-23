@@ -1,27 +1,39 @@
 package com.example.calculator;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView text;
-    Button c, del, multi, div, minus, plus, modulus, dot, equal, button[];
-
-    private String number1 = "Null", number2 = "Null";
-    private char sign = 'N';
+    EditText text;
+    Button c;
+    Button del;
+    Button multi;
+    Button div;
+    Button minus;
+    Button plus;
+    Button modulus;
+    Button dot;
+    Button equal;
+    Button[] button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        text = findViewById(R.id.screenShow);
+        text = findViewById(R.id.display);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            text.setShowSoftInputOnFocus(false);
+        }
 
         button = new Button[11];
         button[0] = findViewById(R.id.button0);
@@ -48,19 +60,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick0(View view){
-        text.setText(text.getText().toString() + 0 + "");
+        text.setText(text.getText().toString() + 0);
     }
 
     public void onClick1(View view){
-        text.setText(text.getText().toString() + 1 + "");
+        text.setText(text.getText().toString() + 1);
     }
 
     public void onClick2(View view){
-        text.setText(text.getText().toString() + 2 + "");
+        text.setText(text.getText().toString() + 2);
     }
 
     public void onClick3(View view){
-        text.setText(text.getText().toString() + 3 + "");
+        text.setText(text.getText().toString() + 3);
     }
 
     public void onClick4(View view){
@@ -88,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickPlus(View view){
-        text.setText(text.getText().toString() + "+");
+        text.setText(text.getText().toString() + "+" + "");
     }
 
     public void onClickMinus(View view){
