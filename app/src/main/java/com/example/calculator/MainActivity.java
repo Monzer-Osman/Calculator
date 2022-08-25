@@ -1,18 +1,22 @@
 package com.example.calculator;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
     EditText text;
+    TextView finalResult;
     Button c;
     Button del;
     Button multi;
@@ -28,12 +32,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        text = findViewById(R.id.display);
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            text.setShowSoftInputOnFocus(false);
-        }
 
         button = new Button[11];
         button[0] = findViewById(R.id.button0);
@@ -57,6 +55,12 @@ public class MainActivity extends AppCompatActivity {
         dot = findViewById(R.id.button_dot);
         multi = findViewById(R.id.button_multiply);
         equal = findViewById(R.id.button_equal);
+        finalResult = findViewById(R.id.final_result);
+        text = findViewById(R.id.display);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            text.setShowSoftInputOnFocus(false);
+        }
+
     }
 
     public void onClick0(View view){
@@ -76,65 +80,110 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick4(View view){
-        text.setText(text.getText().toString() + 4 + "");
+        text.setText(text.getText().toString() + 4);
     }
 
     public void onClick5(View view){
-        text.setText(text.getText().toString() + 5 + "");
+        text.setText(text.getText().toString() + 5);
     }
 
     public void onClick6(View view){
-        text.setText(text.getText().toString() + 6 + "");
+        text.setText(text.getText().toString() + 6);
     }
 
     public void onClick7(View view){
-        text.setText(text.getText().toString() + 7 + "");
+        text.setText(text.getText().toString() + 7);
     }
 
     public void onClick8(View view){
-        text.setText(text.getText().toString() + 8 + "");
+        text.setText(text.getText().toString() + 8);
     }
 
     public void onClick9(View view){
-        text.setText(text.getText().toString() + 9 + "");
+        text.setText(text.getText().toString() + 9);
     }
 
     public void onClickPlus(View view){
-        text.setText(text.getText().toString() + "+" + "");
+        if(!text.getText().toString().isEmpty()) {
+            String tmp = text.getText().toString();
+            if ((int) tmp.charAt(tmp.length() - 1) < 48 || (int) tmp.charAt(tmp.length() - 1) > 57)
+                tmp = tmp.replace(tmp.charAt(tmp.length() - 1), '+');
+            else
+                tmp = tmp + '+';
+            text.setText(tmp);
+        }
     }
 
     public void onClickMinus(View view){
-        text.setText(text.getText().toString() + "-");
+        if(!text.getText().toString().isEmpty()) {
+            String tmp = text.getText().toString();
+            if ((int) tmp.charAt(tmp.length() - 1) < 48 || (int) tmp.charAt(tmp.length() - 1) > 57)
+                tmp = tmp.replace(tmp.charAt(tmp.length() - 1), '-');
+            else
+                tmp = tmp + '-';
+            text.setText(tmp);
+        }
     }
 
     public void onClickMulti(View view) {
-        text.setText(text.getText().toString() + "x");
+        if(!text.getText().toString().isEmpty()) {
+            String tmp = text.getText().toString();
+            if ((int) tmp.charAt(tmp.length() - 1) < 48 || (int) tmp.charAt(tmp.length() - 1) > 57)
+                tmp = tmp.replace(tmp.charAt(tmp.length() - 1), 'x');
+            else
+                tmp = tmp + 'x';
+            text.setText(tmp);
+        }
     }
 
     public void onClickDivide(View view){
-        text.setText(text.getText().toString() + "/");
+        if(!text.getText().toString().isEmpty()) {
+            String tmp = text.getText().toString();
+            if ((int) tmp.charAt(tmp.length() - 1) < 48 || (int) tmp.charAt(tmp.length() - 1) > 57)
+                tmp = tmp.replace(tmp.charAt(tmp.length() - 1), '/');
+            else
+                tmp = tmp + '/';
+            text.setText(tmp);
+        }
     }
 
     public void onClickMod(View view){
-        text.setText(text.getText().toString() + "%");
+        if(!text.getText().toString().isEmpty()) {
+            String tmp = text.getText().toString();
+            if ((int) tmp.charAt(tmp.length() - 1) < 48 || (int) tmp.charAt(tmp.length() - 1) > 57)
+                tmp = tmp.replace(tmp.charAt(tmp.length() - 1), '%');
+            else
+                tmp = tmp + '%';
+            text.setText(tmp);
+        }
     }
 
     public void onClickDot(View view){
-        text.setText(text.getText().toString() + ".");
+        text.setText(String.format("%s.", text.getText().toString()));
     }
 
     public void onClickDel(View view){
-        String temp = text.getText().toString();
-        text.setText(temp.substring(0,temp.length()-1));
+        if(!text.getText().toString().isEmpty()) {
+            String temp = text.getText().toString();
+            text.setText(temp.substring(0, temp.length() - 1));
+            finalResult.setText("");
+        }
     }
 
+    public void onClickC(View view){
+        if(!text.getText().toString().isEmpty()) {
+            text.setText("");
+            finalResult.setText("");
+        }
+    }
+
+    @SuppressLint({"SetTextI18n", "DefaultLocale"})
     public void onClickEqual(View view){
 
         if(text.getText().toString().equals("911")){
-
             startActivity(new Intent(MainActivity.this, MainActivity2.class));
         }
-        else{
+        else if(text.getText() != null){
 
             ArrayList<String> r = Parse.tokenize(text.getText().toString());
 
@@ -142,22 +191,10 @@ public class MainActivity extends AppCompatActivity {
                 text.setText("Error");
             }
             else {
-                double result = Calculator.calculate(r);
-                int result2 = (int) result;
-                if (result - (double) result2 == 0.0) {
-                    System.out.println("result : " + result);
-                    text.setText(result2 + "");
-                } else {
-                    String s = String.valueOf(result);
-                    if(s.length() >= 6)
-                        s = String.format("%.6f", result);
-                    text.setText(s);
-                }
+                BigDecimal result = Calculator.calculate(r);
+                finalResult.setText(result.toEngineeringString());
+                System.out.println(result.toEngineeringString());
             }
         }
-    }
-
-    public void onClickC(View view){
-        text.setText("");
     }
 }

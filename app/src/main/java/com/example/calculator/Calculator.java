@@ -1,7 +1,9 @@
 package com.example.calculator;
 import android.util.Log;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Calculator {
 
@@ -25,17 +27,20 @@ public class Calculator {
         return num1 % num2;
     }
 
-    public static double calculate(ArrayList<String> eq) {
+    public static BigDecimal calculate(ArrayList<String> eq) {
 
-        double result;
+        BigDecimal result;
+        BigDecimal []result2;
 
         for (int i = 1; i < eq.size(); i += 2) {
 
             if (i + 1 == eq.size()) {
                 break;
             } else if (eq.get(i).charAt(0) == '%') {
-                result = Double.parseDouble(eq.get(i - 1)) % Double.parseDouble(eq.get(i + 1));
-                eq.set(i + 1, String.valueOf(result));
+                BigDecimal firstNumber = new BigDecimal(eq.get(i-1));
+                BigDecimal secondNumber = new BigDecimal(eq.get(i+1));
+                result = firstNumber.remainder(secondNumber);
+                eq.set(i + 1, result.toString());
                 eq.remove(i - 1);
                 eq.remove(i - 1);
                 i = i-1;
@@ -48,8 +53,11 @@ public class Calculator {
                 break;
             }
             else if (eq.get(i).charAt(0) == '/') {
-                result = Double.parseDouble(eq.get(i - 1)) / Double.parseDouble(eq.get(i + 1));
-                eq.set(i + 1, String.valueOf(result));
+
+                BigDecimal firstNumber = new BigDecimal(eq.get(i-1));
+                BigDecimal secondNumber = new BigDecimal(eq.get(i+1));
+                result = new BigDecimal(firstNumber.doubleValue() / secondNumber.doubleValue());
+                eq.set(i + 1, result.toString());
                 eq.remove(i - 1);
                 eq.remove(i - 1);
                 i = i-1;
@@ -62,22 +70,25 @@ public class Calculator {
                 break;
             }
             else if (eq.get(i).charAt(0) == 'x') {
-                result = Double.parseDouble(eq.get(i - 1)) * Double.parseDouble(eq.get(i + 1));
-                eq.set(i + 1, String.valueOf(result));
+                BigDecimal firstNumber = new BigDecimal(eq.get(i-1));
+                BigDecimal secondNumber = new BigDecimal(eq.get(i+1));
+                result = firstNumber.multiply(secondNumber);
+                eq.set(i + 1,result.toString());
                 eq.remove(i - 1);
                 eq.remove(i - 1);
                 i = i-1;
             }
         }
-        //Log.d("eq : ", eq.toString());
 
         for (int i = 1; i < eq.size(); i += 2) {
             if (i + 1 == eq.size()) {
                 break;
             }
             else if (eq.get(i).charAt(0) == '-') {
-                result = Double.parseDouble(eq.get(i-1)) - Double.parseDouble(eq.get(i + 1));
-                eq.set(i + 1, String.valueOf(result));
+                BigDecimal firstNumber = new BigDecimal(eq.get(i-1));
+                BigDecimal secondNumber = new BigDecimal(eq.get(i+1));
+                result = firstNumber.subtract(secondNumber);
+                eq.set(i + 1, result.toString());
                 eq.remove(i - 1);
                 eq.remove(i - 1);
                 i = i-1;
@@ -89,15 +100,17 @@ public class Calculator {
                 break;
             }
             else if (eq.get(i).charAt(0) == '+') {
-                result = Double.parseDouble(eq.get(i-1)) + Double.parseDouble(eq.get(i + 1));
-                eq.set(i + 1, String.valueOf(result));
+                BigDecimal firstNumber = new BigDecimal(eq.get(i-1));
+                BigDecimal secondNumber = new BigDecimal(eq.get(i+1));
+                result = firstNumber.add(secondNumber);
+                eq.set(i + 1, result.toString());
                 eq.remove(i - 1);
                 eq.remove(i - 1);
                 i = i-1;
             }
         }
 
-        return Double.parseDouble(eq.get(0));
+        return BigDecimal.valueOf(Double.parseDouble(eq.get(0)));
     }
 }
 
