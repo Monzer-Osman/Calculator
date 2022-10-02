@@ -1,4 +1,4 @@
-Algeria DZD دج
+Algeria DZD د.ج
 Angola AOA Kz
 Benin XOF CF
 Botswana BWP PB
@@ -33,7 +33,7 @@ Mali XOF CF
 Mauritania MRU UM
 Mauritius MUR ₨M
 Mayotte EUR €E
-Morocco MAD د.
+Morocco MAD د.م
 Mozambique MZN MT
 Namibia NAD N$
 Niger XOF CF
@@ -51,7 +51,7 @@ Sudan SDG SD
 São Tomé & Príncipe STN Db
 Tanzania TZS Ts
 Togo XOF CF
-Tunisia TND د.
+Tunisia TND د.ت
 Uganda UGX US
 Western Sahara MAD د.
 Zambia ZMW ZK
@@ -63,42 +63,42 @@ South Georgia & South Sandwich Islands GBP £B
 Afghanistan AFN ؋A
 Armenia AMD ֏A
 Azerbaijan AZN ₼A
-Bahrain BHD .د
+Bahrain BHD د.ب
 Bangladesh BDT ৳B
 Bhutan BTN Nu
-British Indian Ocean Territory USD $U
+British Indian Ocean Territory USD $
 Brunei BND B$
 Cambodia KHR ៛C
 China CNY 元C
 Christmas Island AUD A$
-Cocos  (Ke el
+Cocos (Ke el
 Georgia GEL ₾G
-Hong Kong  SAR  C
+Hong Kong SAR C
 India INR ₹I
 Indonesia IDR Rp
 Iran IRR ﷼I
-Iraq IQD د.
+Iraq IQD د.ع
 Israel ILS ₪I
 Japan JPY ¥J
 Jordan JOD JD
 Kazakhstan KZT ₸K
-Kuwait KWD د.
+Kuwait KWD د.ك
 Kyrgyzstan KGS со
 Laos LAK ₭L
 Lebanon LBP LL
-Macao  SAR  C
+Macao SAR C
 Malaysia MYR RM
 Maldives MVR Rf
 Mongolia MNT ₮M
-Myanmar  (Bu rm
+Myanmar (Bu rm
 Nepal NPR ₨N
 North Korea KPW ₩N
-Oman OMR ر.
+Oman OMR ر.ع
 Pakistan PKR ₨P
 Palestinian Territories ILS ₪I
 Philippines PHP ₱P
-Qatar QAR ر.
-Saudi Arabia SAR ر.
+Qatar QAR ر.ق
+Saudi Arabia SAR ر.س
 Singapore SGD S$
 South Korea KRW ₩S
 Sri Lanka LKR ₨S
@@ -108,10 +108,10 @@ Tajikistan TJS SM
 Thailand THB ฿T
 Turkey TRY ₺T
 Turkmenistan TMT TT
-United Arab Emirates AED د.
+United Arab Emirates AED د.ا
 Uzbekistan UZS лв
 Vietnam VND ₫V
-Yemen YER ر.
+Yemen YER ر.ي
 Albania ALL LA
 Andorra EUR €E
 Austria EUR €E
@@ -172,16 +172,16 @@ Bahamas BSD B$
 Barbados BBD $B
 Belize BZD BZ
 Bermuda BMD BD
-British Virgin Islands USD $U
+British Virgin Islands USD $
 Canada CAD C$
-Caribbean Netherlands USD $U
+Caribbean Netherlands USD $
 Cayman Islands KYD CI
 Costa Rica CRC ₡C
 Cuba CUP Cu
 Curaçao ANG NA
 Dominica XCD EC
 Dominican Republic DOP RD
-El Salvador USD $U
+El Salvador USD $
 Greenland DKK kr
 Grenada XCD EC
 Guadeloupe EUR €E
@@ -194,7 +194,7 @@ Mexico MXN Me
 Montserrat XCD EC
 Nicaragua NIO C$
 Panama PAB B/
-Puerto Rico USD $U
+Puerto Rico USD $
 Sint Maarten ANG NA
 St.Barthélemy EUR €E
 St.Kitts & Nevis XCD EC
@@ -203,34 +203,34 @@ St.Martin EUR €E
 St.Pierre & Miquelon EUR €E
 St.Vincent & Grenadines XCD EC
 Trinidad & Tobago TTD TT
-Turks & Caicos Islands USD $U
-U.S. Virgin Islands USD $U
-United States USD $U
-American Samoa USD $U
+Turks & Caicos Islands USD $
+U.S. Virgin Islands USD $
+United States USD $
+American Samoa USD $
 Australia AUD A$
 Cook Islands NZD NZ
 Fiji FJD FJ
 French Polynesia XPF FC
-Guam USD $U
+Guam USD $
 Kiribati AUD A$
-Marshall Islands USD $U
-Micronesia USD $U
+Marshall Islands USD $
+Micronesia USD $
 Nauru AUD A$
 New Caledonia XPF FC
 New Zealand NZD NZ
 Niue NZD NZ
 Norfolk Island AUD A$
-Northern Mariana Islands USD $U
-Palau USD $U
+Northern Mariana Islands USD $
+Palau USD $
 Papua New Guinea PGK KP
 Pitcairn Islands NZD NZ
 Samoa WST WS
 Solomon Islands SBD SI
-Timor-Leste USD $U
+Timor-Leste USD $
 Tokelau NZD NZ
 Tonga TOP T$
 Tuvalu AUD A$
-U.S. Outlying Islands USD $U
+U.S. Outlying Islands USD $
 Vanuatu VUV VT
 Wallis & Futuna XPF FC
 Argentina ARS $A
@@ -238,12 +238,12 @@ Bolivia BOB $b
 Brazil BRL R$
 Chile CLP CL
 Colombia COP CO
-Ecuador USD $U
+Ecuador USD $
 Falkland Islands FKP £F
 French Guiana EUR €E
 Guyana GYD G$
 Paraguay PYG ₲P
-Peru PEN S/
+Peru PEN S
 Suriname SRD SR
-Uruguay UYU $U
+Uruguay UYU $
 Venezuela VES Bs

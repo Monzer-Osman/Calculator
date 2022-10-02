@@ -1,4 +1,4 @@
-package com.example.calculator.Fragments;
+package com.example.calculator.Fragments.Calculator;
 
 import android.os.Build;
 import android.os.Bundle;

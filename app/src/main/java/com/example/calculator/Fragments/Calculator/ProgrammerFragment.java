@@ -1,4 +1,4 @@
-package com.example.calculator.Fragments;
+package com.example.calculator.Fragments.Calculator;
 
 import static android.graphics.Color.*;
 

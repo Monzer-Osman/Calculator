@@ -1,3 +1,20 @@
 <resources>
-    <string name="app_name">Calculator</string>
+    <string name="app_name">Super Calculator</string>
+    <string name="modlus">%</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="navigation_drawer_open">Open navigation bar</string>
+    <string name="navigation_drawer_close">Close navigation bar</string>
+    <string-array name="volumes">
+        <item>Liters ▼</item>
+        <item>Gallons (US) ▼</item>
+        <item>Gallons (UK) ▼</item>
+    </string-array>
+
+    <string-array name="lengths">
+        <item>Centimeters ▼</item>
+        <item>Meters ▼</item>
+        <item>Kilometers ▼</item>
+        <item>Miles ▼</item>
+    </string-array>
 </resources>

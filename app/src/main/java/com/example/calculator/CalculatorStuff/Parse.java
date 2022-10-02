@@ -1,5 +1,5 @@
-package com.example.calculator;
-import static com.example.calculator.Calculator.calculate;
+package com.example.calculator.CalculatorStuff;
+import static com.example.calculator.CalculatorStuff.Calculator.calculate;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;

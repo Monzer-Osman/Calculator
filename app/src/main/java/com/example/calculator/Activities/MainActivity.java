@@ -1,18 +1,26 @@
-package com.example.calculator;
+package com.example.calculator.Activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.PopupWindow;
 import android.widget.Toast;
+
+import com.example.calculator.Fragments.AboutFragment;
+import com.example.calculator.Fragments.ContactUsFragment;
+import com.example.calculator.Fragments.Converter.CurrencyExchangeFragment;
+import com.example.calculator.Fragments.Calculator.DateFragment;
+import com.example.calculator.Fragments.Calculator.ProgrammerFragment;
+import com.example.calculator.Fragments.Calculator.ScientificFragment;
+import com.example.calculator.Fragments.Calculator.StandardCalculatorFragment;
+import com.example.calculator.Fragments.Converter.VolumeFragment;
+import com.example.calculator.Fragments.Converter.Length_Fragment;
+import com.example.calculator.R;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
@@ -85,14 +93,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.volume:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new VolumeFragment()).commit();
+                getSupportActionBar().setTitle("Volume");
                 break;
 
             case R.id.length:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new Length_Fragment()).commit();
+                getSupportActionBar().setTitle("Length");
                 break;
 
             case R.id.feedBack:
                 sendFeedBack();
                 break;
+
             case R.id.contactUs:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new ContactUsFragment()).commit();

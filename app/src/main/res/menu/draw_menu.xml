@@ -1,4 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
 
+    <item android:title="Calculator">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/standard"
+                    android:icon="@drawable/ic_calculate"
+                    android:title="Standard"
+                    android:color="@color/white">
+                </item>
+
+                <item android:id="@+id/scientific"
+                    android:icon="@drawable/ic_science_24"
+
+                    android:title="Scientific"
+                    android:color="@color/white">
+
+                </item>
+
+                <item android:id="@+id/programmer"
+                    android:icon="@drawable/ic_code_24"
+                    android:title="Programmer"
+                    android:color="@color/white">
+                </item>
+
+                <item android:id="@+id/date"
+                    android:icon="@drawable/ic_calendar_24"
+                    android:title="Date Calculation"
+                    android:color="@color/white">
+                </item>
+
+            </group>
+        </menu>
+    </item>
+    <item android:title="Converter"
+        android:color="@color/white">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/currency"
+                    android:icon="@drawable/ic_currency_exchange_24"
+                    android:title="Currency"
+                    android:color="@color/white">
+
+                </item>
+                <item android:id="@+id/volume"
+                    android:icon="@drawable/ic_baseline_forward_30_24"
+                    android:title="Volume"
+                    android:color="@color/white">
+
+                </item>
+                <item android:id="@+id/length"
+                    android:icon="@drawable/ic_baseline_hdr_weak_24"
+                    android:title="Length"
+                    android:color="@color/white">
+                </item>
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/feedBack"
+        android:color="@color/white"
+        android:icon="@drawable/ic_feedback_24"
+        android:title="FeedBack">
+    </item>
+    <item
+        android:id="@+id/contactUs"
+        android:color="@color/white"
+        android:icon="@drawable/ic_contact_calendar_24"
+        android:title="Contact Us">
+    </item>
+
+    <item
+        android:id="@+id/about"
+        android:color="@color/white"
+        android:icon="@drawable/ic_ew_releases_24"
+        android:title="About">
+    </item>
 </menu>

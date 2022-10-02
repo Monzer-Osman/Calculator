@@ -1,4 +1,4 @@
-package com.example.calculator.Fragments;
+package com.example.calculator.Fragments.Calculator;
 
 import android.os.Build;
 import android.os.Bundle;
@@ -26,26 +26,27 @@ import java.util.ArrayList;
 public class StandardCalculatorFragment extends Fragment implements View.OnClickListener {
 
     private View view;
-    EditText text;
-    TextView finalResult;
-    TextView autoSize;
-    Button c;
-    Button del;
-    Button multi;
-    Button div;
-    Button minus;
-    Button plus;
-    Button modulus;
-    Button dot;
-    Button equal;
-    Button[] button;
+    private EditText text;
+    private TextView finalResult;
+    private TextView autoSize;
+    private Button c;
+    private Button del;
+    private Button multi;
+    private Button div;
+    private Button minus;
+    private Button plus;
+    private Button modulus;
+    private Button dot;
+    private Button equal;
+    private Button[] button;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+
         view = inflater.inflate(R.layout.fragment_standard_calculator, container, false);
         view.setOnClickListener(this);
+
         initializeVariables();
 
         text.addTextChangedListener(new TextWatcher() {
