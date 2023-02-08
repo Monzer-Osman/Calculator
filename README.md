@@ -13,7 +13,7 @@ supper calculator is multipurpose calculator that has many useful futures that y
 <h4> Length Calculator</h4>
 <hr>
 
-<video width="400px" height="300px" controls>
+<video width="400" height="300" controls>
   <source src="https://user-images.githubusercontent.com/36456231/217530589-b8decd0a-5722-4261-952d-e61980f42174.mp4" type="video/mp4">
 </video>
 
