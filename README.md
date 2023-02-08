@@ -14,7 +14,7 @@ supper calculator is multipurpose calculator that has many useful futures that y
 <hr>
 <p></p>
 
-https://user-images.githubusercontent.com/36456231/217530589-b8decd0a-5722-4261-952d-e61980f42174.mp4"
+https://user-images.githubusercontent.com/36456231/217530589-b8decd0a-5722-4261-952d-e61980f42174.mp4
 
 <video width="400px" height="400px" controls>
   <source src="https://user-images.githubusercontent.com/36456231/217531247-d5774e9e-46d9-4a30-b08b-ec7d0903a110.mp4" type="video/mp4">
